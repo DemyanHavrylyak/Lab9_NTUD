@@ -12,38 +12,34 @@ import java.sql.SQLException;
  */
 public class ConnectionFactory {
 
-	public static  final String DB_URL = "jdbc:mysql://localhost:3306/dbntu?useSSL=false"; // 
-	// Встановити Часовий пояс:
-	public static final String TIME_ZONE_SETTINGS = "&serverTimezone=Europe/Kiev";
-	public static final String DB_USER = "root"; //ваш користувач, у нас root
-	public static final String DB_PASSWORD = "sd_avS#DVcd3e5$";   // ваш пароль
+    public static final String DB_URL = "jdbc:mysql://localhost:3306/dbntu?useSSL=false"; //
+    // Встановити Часовий пояс:
+    public static final String TIME_ZONE_SETTINGS = "&serverTimezone=Europe/Kiev";
+    public static final String DB_USER = "root"; //ваш користувач, у нас root
+    public static final String DB_PASSWORD = "sd_avS#DVcd3e5$";   // ваш пароль
 
-	    /**
+    /**
+     * Get a connection to database
+     *
+     * @return Connection object
+     */
 
-	     * Get a connection to database
+    public static Connection getConnection() {
 
-	     * @return Connection object
+        try {
 
-	     */
+            // DriverManager.registerDriver(new Driver());
+            Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            return connection;
 
-	    public static Connection getConnection()
 
-	    {
+        } catch (SQLException ex) {
 
-	      try {
+            throw new RuntimeException("Error connecting to the database", ex);
 
-	         // DriverManager.registerDriver(new Driver());	    	
-         	  Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD); 
-	          return connection;
-	         
+        }
 
-	      } catch (SQLException ex) {
 
-	          throw new RuntimeException("Error connecting to the database", ex);
-
-	      }
-	      
-
-	    }	
+    }
 
 }

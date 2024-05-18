@@ -4,6 +4,11 @@
     <file url="file://$PROJECT_DIR$/src/com/ntu/ConnectionFactory.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/com/ntu/Main.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/com/ntu/dao/BookDAOImpl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/ntu/dao/BookRegisterDAOImpl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/ntu/dao/PersonReaderDAOImpl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/ntu/domain/Book.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/ntu/domain/BookRegister.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/ntu/domain/PersonReader.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
